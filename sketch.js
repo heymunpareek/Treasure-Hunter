@@ -25,7 +25,7 @@ function setup(){
 // Moving background
 path=createSprite(200,200);
 path.addImage(pathImg);
-path.velocityY = 4;
+
 
 
 //creating boy running
@@ -56,7 +56,8 @@ function draw() {
     if(path.y > 400 ){
       path.y = height/2;
     }
-    
+    //change 1
+    path.velocityY = 4 + getFrameRate()/100;
     createCash();
     createDiamonds();
     createJwellery();
@@ -118,7 +119,7 @@ function createCash() {
   var cash = createSprite(Math.round(random(50, 350),40, 10, 10));
   cash.addImage(cashImg);
   cash.scale=0.12;
-  cash.velocityY = 3;
+  cash.velocityY = 4 + getFrameRate()/100;;
   cash.lifetime = 150;
   cashG.add(cash);
   }
@@ -129,7 +130,7 @@ function createDiamonds() {
   var diamonds = createSprite(Math.round(random(50, 350),40, 10, 10));
   diamonds.addImage(diamondsImg);
   diamonds.scale=0.03;
-  diamonds.velocityY = 3;
+  diamonds.velocityY = 4 + getFrameRate()/100;;
   diamonds.lifetime = 150;
   diamondsG.add(diamonds);
 }
@@ -140,7 +141,7 @@ function createJwellery() {
   var jwellery = createSprite(Math.round(random(50, 350),40, 10, 10));
   jwellery.addImage(jwelleryImg);
   jwellery.scale=0.13;
-  jwellery.velocityY = 3;
+  jwellery.velocityY = 4 + getFrameRate()/100;;
   jwellery.lifetime = 150;
   jwelleryG.add(jwellery);
   }
@@ -151,7 +152,7 @@ function createSword(){
   var sword = createSprite(Math.round(random(50, 350)),40, 10, 10);
   sword.addImage(swordImg);
   sword.scale=0.1;
-  sword.velocityY = 3;
+  sword.velocityY = 4 + getFrameRate()/100;;
   sword.lifetime = 150;
   swordGroup.add(sword);
   }

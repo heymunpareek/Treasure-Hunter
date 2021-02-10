@@ -57,7 +57,7 @@ function draw() {
       path.y = height/2;
     }
     //changes
-    path.velocityY = 4 + treasureCollection/100;
+    path.velocityY = 4+ (2*treasureCollection/10);
     createCash();
     createDiamonds();
     createJwellery();
@@ -119,7 +119,7 @@ function createCash() {
   var cash = createSprite(Math.round(random(50, 350),40, 10, 10));
   cash.addImage(cashImg);
   cash.scale=0.12;
-  cash.velocityY = 4 + treasureCollection/100;;
+  cash.velocityY = 4+ (2*treasureCollection/10);
   cash.lifetime = 150;
   cashG.add(cash);
   }
@@ -130,7 +130,7 @@ function createDiamonds() {
   var diamonds = createSprite(Math.round(random(50, 350),40, 10, 10));
   diamonds.addImage(diamondsImg);
   diamonds.scale=0.03;
-  diamonds.velocityY = 4 + treasureCollection/100;;
+  diamonds.velocityY = 4+ (2*treasureCollection/10);
   diamonds.lifetime = 150;
   diamondsG.add(diamonds);
 }
@@ -141,7 +141,7 @@ function createJwellery() {
   var jwellery = createSprite(Math.round(random(50, 350),40, 10, 10));
   jwellery.addImage(jwelleryImg);
   jwellery.scale=0.13;
-  jwellery.velocityY = 4 + treasureCollection/100;;
+  jwellery.velocityY = 4+ (2*treasureCollection/10);
   jwellery.lifetime = 150;
   jwelleryG.add(jwellery);
   }
@@ -152,7 +152,7 @@ function createSword(){
   var sword = createSprite(Math.round(random(50, 350)),40, 10, 10);
   sword.addImage(swordImg);
   sword.scale=0.1;
-  sword.velocityY = 4 + treasureCollection/100;;
+  sword.velocityY = 4+ (2*treasureCollection/10);
   sword.lifetime = 150;
   swordGroup.add(sword);
   }
